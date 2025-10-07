@@ -18,8 +18,6 @@ app.use(morgan("dev"));
 app.use(sanitize()); //it clean non sql query coming from api request
 app.use(xss()); // it clean html code which is coming from api request
 
-app.use(express.static("./public"));
-
 //apply limit on api call
 let limit = rateLimit({
   max: 3,
